@@ -21,6 +21,7 @@ TARGET_NO_RECOVERY := true
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 # Kernel
 KERNEL_DEFCONFIG := tissot_defconfig
