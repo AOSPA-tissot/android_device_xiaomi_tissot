@@ -23,7 +23,9 @@ TARGET_NO_RECOVERY := true
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := tissot_defconfig
+KERNEL_DEFCONFIG := tissot_defconfig
+KERNEL_CUSTOM_LLVM := true
+KERNEL_SD_LLVM_SUPPORT := false
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 55087422464 # 25765059584 - 16384
@@ -46,6 +48,9 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# Build
+BUILD_BROKEN_DUP_RULES := true
 
 # Inherit the proprietary files
 include vendor/xiaomi/tissot/BoardConfigVendor.mk
