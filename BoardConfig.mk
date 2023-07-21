@@ -57,5 +57,8 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 # Build
 BUILD_BROKEN_DUP_RULES := true
 
+# Board Platform
+TARGET_BOARD_PLATFORM := msm8953
+
 # Inherit the proprietary files
 include vendor/xiaomi/tissot/BoardConfigVendor.mk
